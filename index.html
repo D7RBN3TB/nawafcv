@@ -1,1 +1,292 @@
-nawafcv
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CV | نواف العتيبي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Tajawal',sans-serif;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+    color:white;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    background:#111827;
+    border-radius:30px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:350px 1fr;
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+.sidebar{
+    background:linear-gradient(180deg,#14b8a6,#0f766e);
+    padding:40px 30px;
+    text-align:center;
+    position:relative;
+}
+
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:auto;
+    border:6px solid rgba(255,255,255,0.2);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.name{
+    margin-top:25px;
+    font-size:32px;
+    font-weight:700;
+    line-height:1.5;
+}
+
+.job{
+    margin-top:10px;
+    font-size:18px;
+    opacity:0.9;
+}
+
+.contact{
+    margin-top:40px;
+    text-align:right;
+}
+
+.contact div{
+    background:rgba(255,255,255,0.12);
+    padding:14px;
+    border-radius:15px;
+    margin-bottom:15px;
+    font-size:15px;
+    backdrop-filter:blur(10px);
+}
+
+.content{
+    padding:50px;
+}
+
+.section{
+    margin-bottom:45px;
+}
+
+.section-title{
+    font-size:24px;
+    margin-bottom:20px;
+    color:#14b8a6;
+    position:relative;
+    padding-right:18px;
+}
+
+.section-title::before{
+    content:'';
+    position:absolute;
+    right:0;
+    top:5px;
+    width:6px;
+    height:28px;
+    background:#14b8a6;
+    border-radius:10px;
+}
+
+.section p{
+    line-height:2;
+    color:#d1d5db;
+    font-size:16px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.skill{
+    background:#1f2937;
+    padding:12px 18px;
+    border-radius:14px;
+    transition:0.3s;
+    border:1px solid transparent;
+}
+
+.skill:hover{
+    border-color:#14b8a6;
+    transform:translateY(-3px);
+}
+
+.list{
+    list-style:none;
+}
+
+.list li{
+    background:#1f2937;
+    margin-bottom:12px;
+    padding:15px;
+    border-radius:14px;
+    color:#e5e7eb;
+}
+
+@media(max-width:900px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .content{
+        padding:35px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="profile">
+            <img src="your-image.jpg" alt="Profile">
+        </div>
+
+        <h1 class="name">
+            نواف أحمد عبد الدرايج العتيبي
+        </h1>
+
+        <div class="job">
+            طالب ثانوي
+        </div>
+
+        <div class="contact">
+
+            <div>📍 المملكة العربية السعودية</div>
+
+            <div>📞 05XXXXXXXX</div>
+
+            <div>✉️ example@email.com</div>
+
+            <div>🎂 25 / 03 / 2008</div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <div class="section">
+            <h2 class="section-title">نبذة عني</h2>
+
+            <p>
+                طالب طموح يسعى لتطوير مهاراته واكتساب الخبرات العملية
+                في بيئة احترافية، أمتلك روح التعلم السريع والعمل الجماعي
+                وأسعى دائمًا لتحقيق أفضل النتائج.
+            </p>
+        </div>
+
+        <div class="section">
+
+            <h2 class="section-title">التعليم</h2>
+
+            <ul class="list">
+                <li>
+                    طالب مرحلة ثانوية
+                </li>
+
+                <li>
+                    متوقع التخرج: 2026
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="section">
+
+            <h2 class="section-title">المهارات</h2>
+
+            <div class="skills">
+
+                <div class="skill">استخدام الحاسب</div>
+
+                <div class="skill">العمل الجماعي</div>
+
+                <div class="skill">التواصل</div>
+
+                <div class="skill">سرعة التعلم</div>
+
+                <div class="skill">الالتزام</div>
+
+                <div class="skill">حل المشكلات</div>
+
+            </div>
+
+        </div>
+
+        <div class="section">
+
+            <h2 class="section-title">اللغات</h2>
+
+            <ul class="list">
+
+                <li>العربية — ممتاز</li>
+
+                <li>الإنجليزية — جيد</li>
+
+            </ul>
+
+        </div>
+
+        <div class="section">
+
+            <h2 class="section-title">الهوايات</h2>
+
+            <div class="skills">
+
+                <div class="skill">التقنية</div>
+
+                <div class="skill">الرياضة</div>
+
+                <div class="skill">التصميم</div>
+
+                <div class="skill">تطوير الذات</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
