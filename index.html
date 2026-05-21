@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>CV | نواف العتيبي</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,43 +17,53 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Tajawal',sans-serif;
-    background:#0f172a;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background:
+    linear-gradient(135deg,#020617,#0f172a,#111827);
     min-height:100vh;
-    padding:20px;
+    padding:40px 20px;
     color:white;
 }
 
+/* CONTAINER */
+
 .container{
     width:100%;
-    max-width:1100px;
+    max-width:1200px;
+    margin:auto;
     background:#111827;
-    border-radius:30px;
+    border-radius:35px;
     overflow:hidden;
     display:grid;
-    grid-template-columns:350px 1fr;
-    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+    grid-template-columns:360px 1fr;
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.45);
 }
 
+/* SIDEBAR */
+
 .sidebar{
-    background:linear-gradient(180deg,#14b8a6,#0f766e);
-    padding:40px 30px;
+    background:
+    linear-gradient(180deg,#14b8a6,#0f766e);
+    padding:45px 30px;
     text-align:center;
     position:relative;
 }
 
 .profile{
-    width:180px;
-    height:180px;
+    width:190px;
+    height:190px;
     border-radius:50%;
     overflow:hidden;
     margin:auto;
-    border:6px solid rgba(255,255,255,0.2);
-    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    border:7px solid rgba(255,255,255,0.18);
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.25);
 }
 
 .profile img{
@@ -61,16 +73,16 @@ body{
 }
 
 .name{
-    margin-top:25px;
+    margin-top:28px;
     font-size:32px;
     font-weight:700;
-    line-height:1.5;
+    line-height:1.6;
 }
 
 .job{
     margin-top:10px;
     font-size:18px;
-    opacity:0.9;
+    opacity:0.95;
 }
 
 .contact{
@@ -80,45 +92,55 @@ body{
 
 .contact div{
     background:rgba(255,255,255,0.12);
-    padding:14px;
-    border-radius:15px;
+    padding:15px;
+    border-radius:18px;
     margin-bottom:15px;
     font-size:15px;
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
+    transition:0.3s;
 }
 
+.contact div:hover{
+    transform:translateX(-5px);
+    background:rgba(255,255,255,0.18);
+}
+
+/* CONTENT */
+
 .content{
-    padding:50px;
+    padding:55px;
 }
 
 .section{
-    margin-bottom:45px;
+    margin-bottom:55px;
 }
 
 .section-title{
-    font-size:24px;
-    margin-bottom:20px;
+    font-size:26px;
+    margin-bottom:22px;
     color:#14b8a6;
     position:relative;
-    padding-right:18px;
+    padding-right:20px;
 }
 
 .section-title::before{
     content:'';
     position:absolute;
     right:0;
-    top:5px;
-    width:6px;
-    height:28px;
+    top:4px;
+    width:7px;
+    height:32px;
     background:#14b8a6;
     border-radius:10px;
 }
 
 .section p{
-    line-height:2;
+    line-height:2.2;
     color:#d1d5db;
-    font-size:16px;
+    font-size:17px;
 }
+
+/* SKILLS */
 
 .skills{
     display:flex;
@@ -128,66 +150,104 @@ body{
 
 .skill{
     background:#1f2937;
-    padding:12px 18px;
-    border-radius:14px;
+    padding:14px 20px;
+    border-radius:16px;
     transition:0.3s;
     border:1px solid transparent;
+    color:#e5e7eb;
 }
 
 .skill:hover{
     border-color:#14b8a6;
-    transform:translateY(-3px);
-}
-.pdf-btn{
-    background:linear-gradient(135deg,#14b8a6,#0f766e);
-    color:white;
-    border:none;
-    padding:15px 22px;
-    border-radius:16px;
-    font-size:15px;
-    cursor:pointer;
-    transition:0.3s;
-    box-shadow:0 8px 20px rgba(20,184,166,0.25);
-    font-family:'Tajawal',sans-serif;
+    transform:translateY(-4px);
+    background:#172033;
 }
 
-.pdf-btn:hover{
-    transform:translateY(-5px) scale(1.03);
-    box-shadow:0 12px 25px rgba(20,184,166,0.4);
-}
+/* LIST */
 
-.pdf-viewer{
-    width:100%;
-    height:0;
-    overflow:hidden;
-    margin-top:25px;
-    border-radius:20px;
-    transition:0.6s ease;
-    background:#0f172a;
-}
-
-.pdf-viewer.active{
-    height:700px;
-}
-
-.pdf-viewer iframe{
-    width:100%;
-    height:100%;
-    border:none;
-}
 .list{
     list-style:none;
 }
 
 .list li{
     background:#1f2937;
-    margin-bottom:12px;
-    padding:15px;
-    border-radius:14px;
+    margin-bottom:14px;
+    padding:16px;
+    border-radius:16px;
     color:#e5e7eb;
+    transition:0.3s;
 }
 
-@media(max-width:900px){
+.list li:hover{
+    transform:translateX(-5px);
+}
+
+/* PDF BUTTONS */
+
+.pdf-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.pdf-btn{
+    background:
+    linear-gradient(135deg,#14b8a6,#0f766e);
+    color:white;
+    border:none;
+    padding:15px 24px;
+    border-radius:18px;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.35s;
+    box-shadow:
+    0 10px 25px rgba(20,184,166,0.25);
+    font-family:'Tajawal',sans-serif;
+}
+
+.pdf-btn:hover{
+    transform:
+    translateY(-5px)
+    scale(1.03);
+
+    box-shadow:
+    0 15px 30px rgba(20,184,166,0.4);
+}
+
+/* PDF VIEWER */
+
+.pdf-viewer{
+    width:100%;
+    height:0;
+    overflow:hidden;
+    margin-top:35px;
+    border-radius:28px;
+    transition:all 0.55s ease;
+    background:#0b1120;
+    border:1px solid rgba(255,255,255,0.07);
+    opacity:0;
+    transform:translateY(30px);
+    box-shadow:
+    0 20px 45px rgba(0,0,0,0.4);
+}
+
+.pdf-viewer.active{
+    height:850px;
+    opacity:1;
+    transform:translateY(0);
+}
+
+.pdf-viewer embed{
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius:28px;
+    background:white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
 
     .container{
         grid-template-columns:1fr;
@@ -195,6 +255,22 @@ body{
 
     .content{
         padding:35px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .name{
+        font-size:26px;
+    }
+
+    .content{
+        padding:25px;
+    }
+
+    .pdf-viewer.active{
+        height:600px;
     }
 
 }
@@ -226,7 +302,7 @@ body{
 
             <div>📍 المملكة العربية السعودية</div>
 
-            <div>📞 0580818208 </div>
+            <div>📞 0580818208</div>
 
             <div>✉️ noaf94000@gmail.com</div>
 
@@ -240,21 +316,32 @@ body{
 
     <div class="content">
 
+        <!-- ABOUT -->
+
         <div class="section">
-            <h2 class="section-title">نبذة عني</h2>
+
+            <h2 class="section-title">
+                نبذة عني
+            </h2>
 
             <p>
                 طالب طموح يسعى لتطوير مهاراته واكتساب الخبرات العملية
                 في بيئة احترافية، أمتلك روح التعلم السريع والعمل الجماعي
                 وأسعى دائمًا لتحقيق أفضل النتائج.
             </p>
+
         </div>
+
+        <!-- EDUCATION -->
 
         <div class="section">
 
-            <h2 class="section-title">التعليم</h2>
+            <h2 class="section-title">
+                التعليم
+            </h2>
 
             <ul class="list">
+
                 <li>
                     طالب مرحلة ثانوية
                 </li>
@@ -262,91 +349,134 @@ body{
                 <li>
                     متوقع التخرج: 2026
                 </li>
+
             </ul>
 
         </div>
 
+        <!-- SKILLS -->
+
         <div class="section">
 
-            <h2 class="section-title">المهارات</h2>
+            <h2 class="section-title">
+                المهارات
+            </h2>
 
             <div class="skills">
 
-                <div class="skill">استخدام الحاسب</div>
+                <div class="skill">
+                    استخدام الحاسب
+                </div>
 
-                <div class="skill">العمل الجماعي</div>
+                <div class="skill">
+                    العمل الجماعي
+                </div>
 
-                <div class="skill">التواصل</div>
+                <div class="skill">
+                    التواصل
+                </div>
 
-                <div class="skill">سرعة التعلم</div>
+                <div class="skill">
+                    سرعة التعلم
+                </div>
 
-                <div class="skill">الالتزام</div>
+                <div class="skill">
+                    الالتزام
+                </div>
 
-                <div class="skill">حل المشكلات</div>
+                <div class="skill">
+                    حل المشكلات
+                </div>
 
             </div>
 
         </div>
 
+        <!-- LANGUAGES -->
+
         <div class="section">
 
-            <h2 class="section-title">اللغات</h2>
+            <h2 class="section-title">
+                اللغات
+            </h2>
 
             <ul class="list">
 
-                <li>العربية — ممتاز</li>
+                <li>
+                    العربية — ممتاز
+                </li>
 
-                <li>الإنجليزية — جيد</li>
+                <li>
+                    الإنجليزية — جيد
+                </li>
 
             </ul>
 
         </div>
 
-<!-- PDF SECTION -->
-
-<div class="section">
-
-    <h2 class="section-title">الشهادات</h2>
-
-    <div class="skills">
-
-        <button class="pdf-btn" onclick="openPDF('11.pdf')">
-            📄 عرض الملف الأول
-        </button>
-
-        <button class="pdf-btn" onclick="openPDF('22.pdf')">
-            📄 عرض الملف الثاني
-        </button>
-
-        <button class="pdf-btn" onclick="openPDF('33.pdf')">
-            📄 عرض الملف الثالث
-        </button>
-
-    </div>
-
-    <!-- PDF VIEWER -->
-
-    <div id="pdf-viewer" class="pdf-viewer">
-
-        <iframe id="pdf-frame" src=""></iframe>
-
-    </div>
-
-</div>
+        <!-- PDF SECTION -->
 
         <div class="section">
 
-            <h2 class="section-title">الهوايات</h2>
+            <h2 class="section-title">
+                الشهادات
+            </h2>
+
+            <div class="pdf-buttons">
+
+                <button class="pdf-btn" onclick="openPDF('11.pdf')">
+                    📄 عرض الملف الأول
+                </button>
+
+                <button class="pdf-btn" onclick="openPDF('22.pdf')">
+                    📄 عرض الملف الثاني
+                </button>
+
+                <button class="pdf-btn" onclick="openPDF('33.pdf')">
+                    📄 عرض الملف الثالث
+                </button>
+
+            </div>
+
+            <!-- PDF VIEWER -->
+
+            <div id="pdf-viewer" class="pdf-viewer">
+
+                <embed
+                    id="pdf-frame"
+                    src=""
+                    type="application/pdf"
+                >
+
+            </div>
+
+        </div>
+
+        <!-- HOBBIES -->
+
+        <div class="section">
+
+            <h2 class="section-title">
+                الهوايات
+            </h2>
 
             <div class="skills">
 
-                <div class="skill">التقنية</div>
+                <div class="skill">
+                    التقنية
+                </div>
 
-                <div class="skill">الرياضة</div>
+                <div class="skill">
+                    الرياضة
+                </div>
 
-                <div class="skill">التصميم</div>
+                <div class="skill">
+                    التصميم
+                </div>
 
-                <div class="skill">تطوير الذات</div>
+                <div class="skill">
+                    تطوير الذات
+                </div>
 
             </div>
 
@@ -355,22 +485,31 @@ body{
     </div>
 
 </div>
+
+<!-- SCRIPT -->
+
 <script>
 
 function openPDF(file){
 
-    const viewer = document.getElementById('pdf-viewer');
-    const frame = document.getElementById('pdf-frame');
+    const viewer =
+    document.getElementById('pdf-viewer');
+
+    const frame =
+    document.getElementById('pdf-frame');
 
     frame.src = file;
+
     viewer.classList.add('active');
 
     viewer.scrollIntoView({
-        behavior:'smooth'
+        behavior:'smooth',
+        block:'center'
     });
 
 }
 
 </script>
+
 </body>
 </html>
